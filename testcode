@@ -1,0 +1,51 @@
+// ip.ts code
+/*
+import fs from "fs";
+import sharp from "sharp";
+import express from "express";
+const img = express.Router();
+const dir = `imgs`;
+
+fs.readdir(dir, (err, files) => {
+  if (err) {
+    console.log(err);
+  } else {
+    (async function () {
+      try {
+        await sharp(`${dir}/${files[4]}`)
+          .resize(350, 300)
+          .toFile("ProccessedImgs/newProccessedImage.jpg");
+      } catch (error) {
+        console.log(error);
+      }
+    })();
+  }
+});
+
+fs.readFile("ProccessedImgs/newProccessedImage.jpg", function (err, data) {
+  if (err) {
+    throw err; // Fail if the file can't be read.
+  } else {
+    img.get("/", (req, res) => {
+      res.writeHead(200, { "Content-Type": "image/jpg" });
+      res.end(data);
+    });
+  }
+});
+
+export default img;
+*/
+
+
+/* 
+//router code
+import express from "express";
+import img from "./api/ip";
+const routes = express.Router();
+
+routes.get("/", (req, res) => {
+  res.send("Hi");
+});
+routes.use("/img", img);
+export default routes;
+*/
