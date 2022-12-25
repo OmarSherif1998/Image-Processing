@@ -9,7 +9,8 @@
         "build": "npm run copy && npx tsc",
         "jasmine": "jasmine",
         "done": "npm run prettier && npm run build && npm run jasmine",
-        "start": "nodemon src/index.ts"
+        "start": "nodemon src/index.ts",
+        "start:build": "npm run build && node build/index.js"
     },
     "author": "",
     "license": "ISC",
