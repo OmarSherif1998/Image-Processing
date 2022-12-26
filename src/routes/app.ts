@@ -34,6 +34,8 @@ resizeRoute.get("/", (req: express.Request, res: express.Response) => {
     res.sendFile(thumbPath);
   } else if (exist(fullPath)) {
     if (exist(dirPath)) {
+      console.log(fullPath);
+      console.log(thumbPath);
       resize(fullPath, thumbPath, Number(width), Number(height), res);
     } else {
       fs.mkdirSync(dirPath);
