@@ -20,7 +20,7 @@ This API functions as a image resizing tool using `sharp`
 
 ### Running the project
 
-1. run `npm run prod:start`, this will build the project to javascript and run the `index.js` file.
+1. run `npm run start:build`, this will build the project to javascript and run the `index.js` file.
 2. go to you browser and hit the resize endpoint.
 3. You will see the rezied image.
 
