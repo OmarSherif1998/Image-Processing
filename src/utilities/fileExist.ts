@@ -5,6 +5,7 @@ const exist = (imgPath: string): boolean => {
     console.log("The path exists.");
     return true;
   } else {
+    console.log(imgPath);
     return false;
   }
 };

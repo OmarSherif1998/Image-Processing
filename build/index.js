@@ -9,6 +9,6 @@ const app = (0, express_1.default)();
 const port = 3000;
 app.use("/api", app_1.route);
 app.listen(port, () => {
-    console.log(`Server running at ${port}/`);
+    console.log(`Server running at ${port}`);
 });
 exports.default = app;

@@ -7,6 +7,7 @@ const exist = (imgPath) => {
         return true;
     }
     else {
+        console.log(imgPath);
         return false;
     }
 };

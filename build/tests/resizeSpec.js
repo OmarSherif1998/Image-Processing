@@ -6,22 +6,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const resizeFunction_1 = __importDefault(require("../utilities/resizeFunction"));
 const express_1 = __importDefault(require("express"));
 const fileExist_1 = __importDefault(require("../utilities/fileExist"));
-const fs_1 = require("fs");
+const path_1 = __importDefault(require("path"));
 const res = express_1.default.response;
-const h = 300;
-const v = 300;
-const fullURL = "D:\\FWD\\Image-Processing\\build\\imgs\\Full\\fjord.jpg";
-const thumbURL = "D:\\FWD\\Image-Processing\\build\\imgs\\Thumb\\fjord-300-300.jpg";
+const w = 300;
+const h = 320;
+const filename = "fjord";
+const fullURL = path_1.default.join(__dirname, "..", "imgs", "Full", filename + ".jpg");
+const thumbURL = path_1.default.join(__dirname, "..", "imgs", "Thumb", filename + "-" + w + "-" + h + ".jpg");
+describe("Test if the image exist", () => {
+    it("image exists", function () {
+        expect((0, fileExist_1.default)(fullURL)).toBeTruthy();
+        (0, resizeFunction_1.default)(fullURL, thumbURL, w, h, res);
+    });
+});
 describe("Test the resize function if it resizes the image ", () => {
     it("image resized", function () {
-        expect((0, fileExist_1.default)(fullURL)).toBeTruthy();
-        if ((0, fileExist_1.default)(thumbURL)) {
-            (0, fs_1.unlinkSync)(thumbURL);
-            (0, resizeFunction_1.default)(fullURL, thumbURL, h, v, res);
-        }
-        else {
-            (0, resizeFunction_1.default)(fullURL, thumbURL, h, v, res);
-            expect((0, fileExist_1.default)(thumbURL)).toBeTruthy();
-        }
+        expect((0, fileExist_1.default)(thumbURL)).toBeTrue();
     });
 });

@@ -26,8 +26,8 @@ resizeRoute.get("/", (req, res) => {
     }
     else if ((0, fileExist_1.default)(fullPath)) {
         if ((0, fileExist_1.default)(dirPath)) {
-            console.log(fullPath);
-            console.log(thumbPath);
+            // console.log(fullPath);
+            //  console.log(thumbPath);
             (0, resizeFunction_1.default)(fullPath, thumbPath, Number(width), Number(height), res);
         }
         else {
