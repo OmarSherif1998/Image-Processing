@@ -26,9 +26,8 @@ This API functions as a image resizing tool using `sharp`
 
 ### Additional functionality
 
-1. Testing: run `npm run done ` to test endpoint and server and project utilities. You will see result in terminal.
-2. Format: run `npm run prettier` to format project code using prettier. You can adjust `.prettierrc.json` file for personalized configuration according to [prettier docs](https://prettier.io/docs/en/configuration.html).
-3. Linting: run `npm run lint` to lint the project code. You can edit `.eslinrrc.js` See: [ESLint Documentation](https://eslint.org/docs/latest/user-guide/configuring/).
+1. Format: run `npm run prettier` to format project code using prettier. You can adjust `.prettierrc.json` file for personalized configuration according to [prettier docs](https://prettier.io/docs/en/configuration.html).
+2. Linting: run `npm run lint` to lint the project code. You can edit `.eslinrrc.js` See: [ESLint Documentation](https://eslint.org/docs/latest/user-guide/configuring/).
 
 ## Project Dependancies:
 
