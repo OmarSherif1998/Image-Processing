@@ -11,7 +11,9 @@ const validate = (height: string, width: string, res: Response): boolean => {
       res.send("please enter postive numbers");
     }
   } else {
-    res.send("please enter numbers");
+    console.log(h);
+    console.log(w);
+    res.send("please enter numerical values");
   }
   return false;
 };

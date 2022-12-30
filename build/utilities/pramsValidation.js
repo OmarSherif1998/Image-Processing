@@ -12,7 +12,9 @@ const validate = (height, width, res) => {
         }
     }
     else {
-        res.send("please enter numbers");
+        console.log(h);
+        console.log(w);
+        res.send("please enter numerical values");
     }
     return false;
 };

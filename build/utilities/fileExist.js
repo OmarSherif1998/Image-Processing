@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = require("fs");
 const exist = (imgPath) => {
     if ((0, fs_1.existsSync)(imgPath)) {
-        console.log("The path exists.");
+        console.log(imgPath + " exists.");
         return true;
     }
     else {

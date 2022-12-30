@@ -2,7 +2,7 @@ import { existsSync } from "fs";
 
 const exist = (imgPath: string): boolean => {
   if (existsSync(imgPath)) {
-    console.log("The path exists.");
+    console.log(imgPath + " exists.");
     return true;
   } else {
     console.log(imgPath);

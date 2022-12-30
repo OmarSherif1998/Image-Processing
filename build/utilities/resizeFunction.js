@@ -9,6 +9,7 @@ const resize = (fullPath, thumbPath, width, height, res) => {
         .resize(width, height)
         .toFile(thumbPath, (err) => {
         if (err) {
+            res.send("Please enter numerical numbers");
             throw err;
         }
         res.sendFile(thumbPath);

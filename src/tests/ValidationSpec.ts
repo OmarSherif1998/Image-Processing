@@ -1,4 +1,4 @@
-import validate from "../utilities/pramsValidatation";
+import validate from "../utilities/pramsValidation";
 import express from "express";
 
 const h = "200";
